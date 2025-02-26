@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user = {
+            name: "Bogdan",
+            lastName: "Lyamzin",
+            age: 39,
+            address: "LimbugerStrabe 39",
+            workingTime: "9-00 - 21-00"
+        };
+        const {lastName, name, ...otherProperties} = user;
+        // const name = user.name;
+        // const lastName = user.lastName;
+        // const otherProperties = {
+        //     age: user.age,
+        //     address: user.address,
+        //     workingTime: user.workkingTime,
+        // }
+        console.log(user);
+      
+ 
+        const getUserFullName = ({name, lastName})=> {
+            return `${name} ${lastName}`;
+        }
+
+        // console.log(getUserFullName(user));
+        const company = {
+            name: "Google",
+            address: ""
+        };
+        const userWithCompany = {...user, ...company};
+        // const userWithCompany = {name: "Bogdan", lastName: "Lyamzin", age: 39, name: "Google", address: ""}
+        // const userWithCompany = {};
+        // for(const key in user) {
+        //     userWithCompany[key] = user[key];
+        // }
+
+        // for(const key in company) {
+        //     userWithCompany[key] = company[key];
+        // }
+
+        // console.log(userWithCompany)
+    </script>
+</body>
+</html>

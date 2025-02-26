@@ -1,0 +1,10 @@
+@import url("../../styles/reset.css");
+@import url("../../styles/variables.css");
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: lightcyan;
+}
+
+.navbar-nav {
+    display:  flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.navbar-nav-link {
+    text-decoration: none;
+}
