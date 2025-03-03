@@ -1,0 +1,30 @@
+.btn {
+    padding: 12px 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn.contained {
+    border: 1px solid #34AD5D;
+    background-color: #34AD5D;
+    color: #fff;
+}
+
+.btn.contained:hover {
+    background-color: transparent;
+    color: #34AD5D;
+}
+
+.btn.outlined {
+    border: 1px solid #34AD5D;
+    background-color: transparent;
+    color: #34AD5D;
+}
+
+.btn.outlined:hover {
+    background-color: #34AD5D;
+    color: #fff;
+}
