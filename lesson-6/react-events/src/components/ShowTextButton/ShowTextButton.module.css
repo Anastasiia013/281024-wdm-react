@@ -1,0 +1,10 @@
+.btn {
+    background-color: transparent;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: red;
+    padding: 10px 15px;
+    cursor: pointer;
+}
