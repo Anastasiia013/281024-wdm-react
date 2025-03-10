@@ -13,20 +13,20 @@ import AccordionItem from "./AccordionItem/AccordionItem";
 // console.log(typeof sallary3);
 // console.log(sallary4);
 // console.log(typeof sallary4);
-const userName = "Bogdan";
-const userLastName = "Lyamzin";
-// const userFullName = userName + " " + userLastName;
-const userFullName = `${userName} ${userLastName}`;
-console.log(userFullName)
-const backendResponse = "5000 usd";
-const sallaryInUSD = Number(backendResponse);
-if(!Number.isNaN(sallaryInUSD)) {
-    const sallaryInEuro = sallaryInUSD / 1.03;
-    console.log(sallaryInEuro)
-}
-else {
-    console.log("Зарплата это не число")
-}
+// const userName = "Bogdan";
+// const userLastName = "Lyamzin";
+// // const userFullName = userName + " " + userLastName;
+// const userFullName = `${userName} ${userLastName}`;
+// console.log(userFullName)
+// const backendResponse = "5000 usd";
+// const sallaryInUSD = Number(backendResponse);
+// if(!Number.isNaN(sallaryInUSD)) {
+//     const sallaryInEuro = sallaryInUSD / 1.03;
+//     console.log(sallaryInEuro)
+// }
+// else {
+//     console.log("Зарплата это не число")
+// }
 
 const Accordion = ({ title, items }) => {
   const [openIndex, setOpenIndex] = useState(null);

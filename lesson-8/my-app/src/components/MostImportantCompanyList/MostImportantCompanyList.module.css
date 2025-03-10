@@ -1,0 +1,22 @@
+.section {
+    background-color: #ffffff;
+    padding: 70px 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color-light);
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
