@@ -1,0 +1,10 @@
+.item {
+    font-size: 18px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-weight: 700;
+}
