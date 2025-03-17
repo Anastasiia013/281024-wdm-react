@@ -1,0 +1,31 @@
+import ThemeProvider from "../../context/ThemeProvider";
+import NotificationsProvider from "../../context/NotificationsProvider";
+
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import NotificationsCount from "../NotificationsCount/NotificationsCount";
+import Menu from "../Menu/Menu";
+import Button from "../Button/Button";
+import NotificationList from "../NotificationList/NotificationList";
+
+import styles from "./App.module.css";
+
+import "../../styles/style.css";
+
+function App() {
+  return (
+    <ThemeProvider>
+      <NotificationsProvider>
+        <div className={styles.header}>
+          <ThemeSwitcher />
+          <NotificationsCount />
+        </div>
+
+        <Menu />
+        <Button>Order</Button>
+        <NotificationList />
+      </NotificationsProvider>
+    </ThemeProvider>
+  );
+}
+
+export default App;
