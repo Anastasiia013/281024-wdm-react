@@ -41,7 +41,7 @@ const ToDoList = () => {
         // .finally(()=> setLoading(false))
     };
 
-    // getItems();
+    getItems();
   }, []);
 
   const loadItems = async()=> {
