@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            height: 30px;
+            position: relative;
+            /* z-index: 5; */
+        }
+        .main {
+            background-color: #000;
+            height: calc(100vh - 30px);
+        }
+        .modal {
+            background-color: lightgrey;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="modal"></div>
+    </div>
+    <div class="main"></div>
+</body>
+</html>
