@@ -1,0 +1,10 @@
+:root {
+    --main-text-color: #090808CC;
+    --block-background-color: #7D9FFF;
+    --block-border-color: #5ECFFF;
+    --block-dark-backgroud-color: #3F5CC0CC;
+    --main-button-background-color: #0D3D3066;
+    --secondary-button-background-color: #3F5CC0CC;
+
+    --block-title-font-size: 36px;
+}

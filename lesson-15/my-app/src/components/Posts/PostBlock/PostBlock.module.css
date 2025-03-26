@@ -1,0 +1,13 @@
+.wrapper {
+    background-color: var(--block-background-color);
+    border: 1px solid var(--block-border-color);
+    padding: 60px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: var(--block-title-font-size);
+    margin-bottom: 124px;
+}
