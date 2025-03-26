@@ -4,7 +4,7 @@ import PostBlock from "./PostBlock/PostBlock";
 import PostForm from "./PostForm/PostForm";
 import PostList from "./PostList/PostList";
 
-import { getPosts, deletePost } from "../../api/posts";
+import { getPosts, deletePost, addPost } from "../../api/posts";
 
 import styles from "./Posts.module.css";
 
@@ -35,6 +35,20 @@ const Posts = () => {
 
   const nextPage = ()=> setPage(prevPage => prevPage + 1);
 
+  const onAddPost = async newPost => {
+    try {
+      setLoading(true);
+      const data = await addPost(newPost);
+      setItems(prevItems => [...prevItems, data]);
+    }
+    catch(error) {
+      setError(error.message);
+    }
+    finally {
+      setLoading(false);
+    }
+  }
+
   const onDeletePost = async id => {
     try {
         setLoading(true);
@@ -59,7 +73,7 @@ const Posts = () => {
           <button onClick={nextPage} className={styles.next}>Далее</button>
         </PostBlock>
         <PostBlock title="Написать пост">
-          <PostForm />
+          <PostForm onAddPost={onAddPost} />
         </PostBlock>
       </div>
     </div>

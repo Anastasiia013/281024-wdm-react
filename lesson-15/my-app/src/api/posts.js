@@ -15,6 +15,12 @@ export const getPosts = async ({page = 1, limit = 5})=> {
     return data;
 }
 
+export const addPost = async newPost => {
+    const {data} = await postsInstance.post("/", newPost);
+
+    return data;
+}
+
 export const deletePost = async id => {
     const {data} = await postsInstance.delete(`/${id}`);
 
