@@ -2,7 +2,7 @@ import Button from "../../Button/Button";
 
 import styles from "./PostList.module.css";
 
-const PostList = ({ items = [] }) => {
+const PostList = ({ items = [], onDeletePost }) => {
   const elements = items.map(({id, title, text}) => (
     <li key={id} className={styles.item}>
       <div className={styles.content}>
@@ -13,7 +13,7 @@ const PostList = ({ items = [] }) => {
       </div>
       <div className={styles.info}>
         <p className={styles.id}>id поста: {id}</p>
-        <Button type="button">Удалить</Button>
+        <Button onClick={() => onDeletePost(id)} type="button">Удалить</Button>
       </div>
     </li>
   ));
