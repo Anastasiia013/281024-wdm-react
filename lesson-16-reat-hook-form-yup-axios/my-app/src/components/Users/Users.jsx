@@ -30,7 +30,7 @@ const Users = () => {
     fetchUsers();
   }, []);
 
-  const onAddUser = async newUser => {
+  const onAddUser = async ({repeatPassword: _, ...newUser}) => {
     try {
       setLoading(true);
       const data = await addUser(newUser);
