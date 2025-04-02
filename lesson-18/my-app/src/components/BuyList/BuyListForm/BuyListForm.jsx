@@ -8,9 +8,10 @@ const BuyListForm = ({ onSubmit }) => {
   const {state, handleChange, handleSubmit} = useForm({initialState, onSubmit});
 
   const firstInputRef = useRef();
-console.log(firstInputRef);
+  console.log(firstInputRef);
   useEffect(()=> {
     console.log(firstInputRef);
+    firstInputRef.current.focus();
   }, []);
 
   const optionElements = options.map((item) => (
@@ -24,7 +25,7 @@ console.log(firstInputRef);
       <div>
         <label htmlFor="">Название покупки</label>
         <input
-        ref={firstInputRef}
+          ref={firstInputRef}
           value={state.name}
           onChange={handleChange}
           required

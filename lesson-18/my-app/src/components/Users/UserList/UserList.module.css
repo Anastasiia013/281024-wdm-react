@@ -1,0 +1,20 @@
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.item {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.btn {
+    background-color: #00ED64;
+    cursor: pointer;
+    border: 1px solid rgb(136, 147, 151);
+    padding: 5px 10px;
+    border-radius: 6px;
+}
