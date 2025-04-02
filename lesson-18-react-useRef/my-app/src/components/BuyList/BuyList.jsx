@@ -7,8 +7,6 @@ import useLocalStorage from "../../hooks/useLocalStorage";
 
 import styles from "./BuyList.module.css";
 
-console.log(JSON.parse(localStorage.getItem("name")))
-
 const BuyList = ()=> {
     const {state, setState} = useLocalStorage({key: "buy-list", defaultValue: []});
 

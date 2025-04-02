@@ -1,0 +1,24 @@
+const mainText = [
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cumque rem repellat, quas laborum dolores quos similique aliquam corrupti dolore. Voluptatibus accusantium dolorem ratione. Maxime esse quaerat aliquid dolor neque.",
+];
+
+export default mainText;
