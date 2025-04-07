@@ -4,7 +4,7 @@ const List = ({items = [], deleteItem})=> {
             Тип: {item.type}.
             {item.name}. 
             {item.urgency && "Срочно!"} 
-            <button onClick={()=> deleteItem(item.name)}>Delete</button></li>
+            <button onClick={()=> deleteItem(item.id)}>Delete</button></li>
     ));
 
     return (

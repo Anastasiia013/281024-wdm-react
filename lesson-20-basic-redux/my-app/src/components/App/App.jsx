@@ -1,13 +1,13 @@
 import Navigation from "../../Navigation";
 
-import MainMenu from "../MainMenu/MainMenu";
+import Header from "../Header/Header";
 
 import "../../styles/style.css";
 
 function App() {
   return (
     <>
-      <MainMenu />
+      <Header />
       <Navigation />
     </>
   )

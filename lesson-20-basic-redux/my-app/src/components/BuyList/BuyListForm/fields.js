@@ -12,5 +12,9 @@ export const options = [
     {
         value: "spend",
         text: "Повседневные расходы"
-    }
+    },
+    {
+        value: "techno",
+        text: "Техника"
+    },
 ];

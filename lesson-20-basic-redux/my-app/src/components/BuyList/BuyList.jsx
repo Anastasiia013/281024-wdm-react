@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import BuyListForm from "./BuyListForm/BuyListForm";
 import List from "./List/List";
 
+import { addBuListItem, deleteBuyListItem } from "../../redux/actionCreators";
+
 import styles from "./BuyList.module.css";
 
 const BuyList = ()=> {
-    const [state, setState] = useState([]);
+    const state = useSelector(store => store.buyList);
+    const dispatch = useDispatch();
 
     const addItem = newItem => {
-        setState(prevItems => [...prevItems, newItem]);
+        const action = addBuListItem(newItem);
+        dispatch(action);
     }
 
-    const deleteItem = name => {
-        setState(prevItems => prevItems.filter(item => item.name !== name))
+    const deleteItem = id => {
+        dispatch(deleteBuyListItem(id));
     }
 
     return (
