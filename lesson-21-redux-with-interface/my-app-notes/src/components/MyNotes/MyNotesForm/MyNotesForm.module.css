@@ -1,0 +1,11 @@
+.formGroup {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+}
+
+.error {
+    font-weight: 700;
+    color: red;
+}

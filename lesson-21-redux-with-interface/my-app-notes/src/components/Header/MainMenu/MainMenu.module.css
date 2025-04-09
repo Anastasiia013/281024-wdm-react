@@ -1,0 +1,22 @@
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: red;
+}
+
+.link:hover {
+    background-color: #000;
+}
+
+.link:global(.active) {
+    background-color: #000;
+}
