@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link {
+    text-decoration: none;
+    padding-bottom: 5px;
+    color: #000;
+    font-size: 18px;
+}
+
+.link:global(.active) {
+    font-weight: 700;
+}

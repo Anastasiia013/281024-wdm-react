@@ -1,0 +1,1 @@
+export const selectIsAuthenticate = (store) => store.isAuthenticate;

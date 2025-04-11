@@ -21,11 +21,9 @@ const reducer = (store = initialStore, action) => {
       };
 
     case EDIT_NOTE:
-      const { id, ...data } = action.payload;
       const updateNotes = [...store.notes];
-      const updateIndex = updateNotes.findIndex((item) => item.id === id);
-      updateNotes[updateIndex] = data;
-      console.log(updateNotes);
+      const updateIndex = updateNotes.findIndex((item) => item.id === action.payload.id);
+      updateNotes[updateIndex] = {...action.payload};
       return { ...store, notes: updateNotes };
 
     case TOGGLE_NOTE_IMPORTANT:
