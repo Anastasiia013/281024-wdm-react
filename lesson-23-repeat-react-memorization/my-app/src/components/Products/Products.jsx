@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useCallback} from "react";
 import { useSearchParams } from "react-router-dom";
 
 import ProductsSearch from "./ProductsSearch/ProductsSearch";
@@ -35,9 +35,9 @@ const Products = ()=> {
         fetchProducts();
     }, [search]);
 
-    const onSearch = ({search})=> {
+    const onSearch = useCallback(({search})=> {
         setSearchParams({search});
-    }
+    }, [setSearchParams]);
 
     return (
         <div>

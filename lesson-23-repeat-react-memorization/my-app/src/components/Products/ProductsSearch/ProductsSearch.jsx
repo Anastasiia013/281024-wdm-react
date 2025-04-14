@@ -1,4 +1,4 @@
-import { useMemo, useId } from "react";
+import { useMemo, useId, memo } from "react";
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
 
@@ -6,7 +6,7 @@ import styles from "./ProductsSearch.module.css";
 
 const ProductsSearch = ({submitForm})=> {
     const {register, handleSubmit, reset, formState: {errors}} = useForm();
-
+    console.log("render form");
     const searchId = useMemo(()=> nanoid(), []);
     // const searchId = useId();
     // console.log(searchId);
@@ -26,4 +26,4 @@ const ProductsSearch = ({submitForm})=> {
     )
 }
 
-export default ProductsSearch;
+export default memo(ProductsSearch);
