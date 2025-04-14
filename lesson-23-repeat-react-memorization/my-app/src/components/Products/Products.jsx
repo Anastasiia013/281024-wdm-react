@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import { useSearchParams } from "react-router-dom";
 
 import ProductsSearch from "./ProductsSearch/ProductsSearch";
 import ProductList from "./ProductList/ProductList";
@@ -11,6 +12,8 @@ const Products = ()=> {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+
+    const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(()=> {
         const fetchProducts = async()=> {
@@ -30,9 +33,13 @@ const Products = ()=> {
         fetchProducts();
     }, []);
 
+    const onSearch = ({search})=> {
+        setSearchParams({search});
+    }
+
     return (
         <div>
-            <ProductsSearch />
+            <ProductsSearch submitForm={onSearch} />
             <ProductList items={items} />
             {loading && <p>Loading...</p>}
             {error && <p className={styles.error}>{error}</p>}

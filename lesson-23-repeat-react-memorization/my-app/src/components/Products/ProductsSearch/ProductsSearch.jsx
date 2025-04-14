@@ -2,11 +2,11 @@ import { useForm } from "react-hook-form";
 
 import styles from "./ProductsSearch.module.css";
 
-const ProductsSearch = ()=> {
+const ProductsSearch = ({submitForm})=> {
     const {register, handleSubmit, reset, formState: {errors}} = useForm();
 
     const onSubmit = values => {
-        console.log(values);
+        submitForm(values);
         reset();
     }
 
