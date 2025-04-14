@@ -7,7 +7,7 @@ const ProductList = ({ items = [] }) => {
     <ProductListItem key={item.id} {...item} />
   ));
 
-  return <ul>{elements}</ul>;
+  return <ul className={styles.list}>{elements}</ul>;
 };
 
 export default ProductList;
