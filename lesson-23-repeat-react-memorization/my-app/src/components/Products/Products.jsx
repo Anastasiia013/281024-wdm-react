@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 
+import ProductsSearch from "./ProductsSearch/ProductsSearch";
 import ProductList from "./ProductList/ProductList";
 
 import { getProducts } from "../../api/products";
@@ -31,6 +32,7 @@ const Products = ()=> {
 
     return (
         <div>
+            <ProductsSearch />
             <ProductList items={items} />
             {loading && <p>Loading...</p>}
             {error && <p className={styles.error}>{error}</p>}
