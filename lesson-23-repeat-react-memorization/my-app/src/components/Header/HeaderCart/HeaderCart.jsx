@@ -1,10 +1,17 @@
+import { useSelector } from "react-redux";
+
+import { selectTotalCartItems, selectTotalCartPrice } from "../../../redux/cart/cart-selectors";
+
 import styles from "./HeaderCart.module.css";
 
 const HeaderCart = () => {
+  const totalItems = useSelector(selectTotalCartItems);
+  const totalPrice = useSelector(selectTotalCartPrice);
+
   return (
     <p>
-      <span>Total products: 0.</span>
-      <span>Total price: 0.</span>
+      <span>Total products: {totalItems}.</span>
+      <span>Total price: {totalPrice}.</span>
     </p>
   );
 };
