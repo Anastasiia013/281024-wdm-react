@@ -1,5 +1,6 @@
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import HeaderMenu from "./HeaderMenu/HeaderMenu";
+import HeaderCart from "./HeaderCart/HeaderCart";
 
 import styles from "./Header.module.css";
 
@@ -8,6 +9,7 @@ const Header = ()=> {
         <header className={styles.header}>
             <HeaderLogo />
             <HeaderMenu />
+            <HeaderCart />
         </header>
     )
 }
