@@ -15,11 +15,13 @@ const Products = ()=> {
 
     const [searchParams, setSearchParams] = useSearchParams();
 
+    const search = searchParams.get("search");
+    
     useEffect(()=> {
         const fetchProducts = async()=> {
             try {
                 setLoading(true);
-                const data = await getProducts();
+                const data = await getProducts({search});
                 setItems(data);
             }
             catch(error) {
@@ -31,7 +33,7 @@ const Products = ()=> {
         }
 
         fetchProducts();
-    }, []);
+    }, [search]);
 
     const onSearch = ({search})=> {
         setSearchParams({search});
