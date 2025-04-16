@@ -5,7 +5,6 @@ const productsInstance = axios.create({
 })
 
 export const getProducts = async(params = {})=> {
-    console.log(params);
     const {data} = await productsInstance.get("/", {
         params,
     });

@@ -24,7 +24,7 @@ const ProductListItem = ({ onAddProductToCart, ...product }) => {
         <CardContent>
           <Typography variant="h6">{name}</Typography>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{justifyContent: "space-between"}}>
           <Typography variant="h6">{price} $</Typography>
           <IconButton onClick={()=> onAddProductToCart(product)}>
             <ShoppingCartOutlinedIcon />
