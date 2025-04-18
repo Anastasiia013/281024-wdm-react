@@ -3,6 +3,7 @@ import {
   INSREASE_COUNT_IN_CART,
   DESREASE_COUNT_IN_CART,
   DELETE_FROM_CART,
+  CLEAR_CART,
 } from "./cart-types";
 
 const cartReducer = (store = [], { type, payload }) => {
@@ -33,6 +34,10 @@ const cartReducer = (store = [], { type, payload }) => {
 
     case DELETE_FROM_CART:
         return newStore.filter((item) => item.id !== payload);
+
+    case CLEAR_CART:
+        return [];
+        
     default:
       return store;
   }

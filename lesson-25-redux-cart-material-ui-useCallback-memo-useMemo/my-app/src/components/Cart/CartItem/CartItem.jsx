@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -19,6 +20,8 @@ const CartItem = ({
   onDecreaseCart,
   onDeleteFromCart,
 }) => {
+  console.log(`render ${name}`);
+
   return (
     <>
       <Box sx={styles.box}>
@@ -28,7 +31,7 @@ const CartItem = ({
             <Link to={`/products/${id}`} style={styles.link}>
               <Typography variant="body2">{name}</Typography>
             </Link>
-            <IconButton onClick={()=> onDeleteFromCart(id)}>
+            <IconButton onClick={() => onDeleteFromCart(id)}>
               <RemoveShoppingCartOutlinedIcon />
             </IconButton>
           </Box>
@@ -46,7 +49,7 @@ const CartItem = ({
               </IconButton>
             </Box>
             <Typography variant="subtitle2" sx={styles.totalPrice}>
-              {price * count}
+              {(price * count).toFixed(2)}
             </Typography>
           </Box>
         </Box>
@@ -56,4 +59,22 @@ const CartItem = ({
   );
 };
 
-export default CartItem;
+export default memo(CartItem);
+/*
+const memo = component => {
+    const memory = {
+        prevProps: {},
+        prevReturn: ""
+    };
+
+    return (props)=> {
+        if(props !== memory.prevProps) {
+            memory.prevProps = props;
+            memory.prevReturn = component(props);
+            return memory.prevReturn;
+        }
+        return memory.prevReturn;
+    };
+}
+const MemorizedCartItem = memo(CartItem);
+*/
