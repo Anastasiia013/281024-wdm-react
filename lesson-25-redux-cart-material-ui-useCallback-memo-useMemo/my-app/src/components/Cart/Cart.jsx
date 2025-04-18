@@ -15,8 +15,8 @@ const Cart = ()=> {
 
     return (
         <Box>
-            <Typography variant='h5'>Cart</Typography>
-            <Paper>
+            <Typography variant='h5' gutterBottom>Cart</Typography>
+            <Paper sx={{padding: "15px"}}>
                 {elements}
             </Paper>
         </Box>
