@@ -9,7 +9,7 @@ import Divider from "@mui/material/Divider";
 
 import styles from "./styles";
 
-const CartItem = ({ id, image, name, price, count }) => {
+const CartItem = ({ id, image, name, price, count, onIncreaseCart }) => {
   return (
     <>
       <Box sx={styles.box}>
@@ -32,7 +32,7 @@ const CartItem = ({ id, image, name, price, count }) => {
               <Typography variant="body" sx={styles.count}>
                 {count}
               </Typography>
-              <IconButton>
+              <IconButton onClick={()=> onIncreaseCart(id)}>
                 <AddOutlinedIcon />
               </IconButton>
             </Box>
