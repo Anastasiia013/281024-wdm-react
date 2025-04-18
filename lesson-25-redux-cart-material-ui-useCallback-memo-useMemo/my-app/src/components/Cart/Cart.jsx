@@ -10,6 +10,7 @@ import CartItem from "./CartItem/CartItem";
 import {
   increaseCountInCart,
   decreaseCountInCart,
+  deleteFromCart,
 } from "../../redux/cart/cart-actions";
 
 import { selectCart } from "../../redux/cart/cart-selectors";
@@ -32,12 +33,20 @@ const Cart = () => {
     [dispatch]
   );
 
+  const onDeleteFromCart = useCallback(
+    (id) => {
+      dispatch(deleteFromCart(id));
+    },
+    [dispatch]
+  );
+
   const elements = items.map((item) => (
     <CartItem
       key={item.id}
       {...item}
       onIncreaseCart={onIncreaseCart}
       onDecreaseCart={onDecreaseCart}
+      onDeleteFromCart={onDeleteFromCart}
     />
   ));
 

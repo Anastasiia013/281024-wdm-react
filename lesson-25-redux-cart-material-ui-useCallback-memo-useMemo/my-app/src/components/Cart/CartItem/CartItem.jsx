@@ -17,6 +17,7 @@ const CartItem = ({
   count,
   onIncreaseCart,
   onDecreaseCart,
+  onDeleteFromCart,
 }) => {
   return (
     <>
@@ -27,7 +28,7 @@ const CartItem = ({
             <Link to={`/products/${id}`} style={styles.link}>
               <Typography variant="body2">{name}</Typography>
             </Link>
-            <IconButton>
+            <IconButton onClick={()=> onDeleteFromCart(id)}>
               <RemoveShoppingCartOutlinedIcon />
             </IconButton>
           </Box>
