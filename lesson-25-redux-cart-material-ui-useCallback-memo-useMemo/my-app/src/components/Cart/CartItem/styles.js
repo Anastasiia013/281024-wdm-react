@@ -5,12 +5,17 @@ const styles = {
     gap: "20px",
     marginBottom: "15px",
   },
+  divider: {
+    marginBottom: "15px"
+  },
   link: {
     textDecoration: "none",
     color: "#000"
   },
-  divider: {
-    marginBottom: "15px"
+  linkWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   actions: {
     display: "flex",
@@ -23,6 +28,9 @@ const styles = {
   },
   count: {
     fontSize: "18px"
+  },
+  totalPrice: {
+    fontSize: "20px"
   }
 };
 
