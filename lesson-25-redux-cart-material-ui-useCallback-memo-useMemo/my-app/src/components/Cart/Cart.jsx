@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -15,10 +16,15 @@ import {
   clearCart,
 } from "../../redux/cart/cart-actions";
 
-import { selectCart } from "../../redux/cart/cart-selectors";
+import {
+  selectCart,
+  selectTotalCartPrice,
+} from "../../redux/cart/cart-selectors";
 
 const Cart = () => {
   const items = useSelector(selectCart);
+  const totalPrice = useSelector(selectTotalCartPrice);
+
   const dispatch = useDispatch();
 
   const onClearCart = useCallback(() => {
@@ -73,7 +79,15 @@ const Cart = () => {
         </Button>
       </Box>
 
-      <Paper sx={{ padding: "15px" }}>{elements}</Paper>
+      <Paper sx={{ padding: "15px", marginBottom: "25px" }}>{elements}</Paper>
+      <Box sx={{ display: "flex", justifyContent: "flex-end", gap: "20px" }}>
+        <Typography variant="h5">Total price: {totalPrice}</Typography>
+        <Link to="/checkout">
+          <Button variant="contained" color="success">
+            To checkout
+          </Button>
+        </Link>
+      </Box>
     </Box>
   );
 };
