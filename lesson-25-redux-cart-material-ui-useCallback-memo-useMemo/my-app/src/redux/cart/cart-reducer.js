@@ -1,4 +1,4 @@
-import { ADD_TO_CART, INSREASE_COUNT_IN_CART } from "./cart-types";
+import { ADD_TO_CART, INSREASE_COUNT_IN_CART, DESREASE_COUNT_IN_CART } from "./cart-types";
 
 const cartReducer = (store = [], {type, payload})=> {
     switch(type) {
@@ -17,6 +17,14 @@ const cartReducer = (store = [], {type, payload})=> {
             const updateProduct = updateStore.find(item => item.id === payload);
             updateProduct.count += 1;
             return updateStore;
+        case DESREASE_COUNT_IN_CART:
+            const descreaseStore = store.map(item => ({...item}));
+            const descreaseProduct = descreaseStore.find(item => item.id === payload);
+            descreaseProduct.count -= 1;
+            if(!descreaseProduct.count) {
+                return descreaseStore.filter(item => item.id !== payload);
+            }
+            return descreaseStore;
         default:
             return store;
     }
