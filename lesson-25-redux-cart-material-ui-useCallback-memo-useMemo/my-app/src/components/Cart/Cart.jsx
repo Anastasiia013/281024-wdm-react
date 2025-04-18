@@ -1,13 +1,11 @@
 import { useCallback } from "react";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-// import { Typography, Paper } from '@mui/material';
-import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 
+import CartHeader from "./CartHeader/CartHeader";
 import CartItem from "./CartItem/CartItem";
+import CartCheckout from "./CartCheckout/CartCheckout";
 
 import {
   increaseCountInCart,
@@ -64,30 +62,9 @@ const Cart = () => {
 
   return (
     <Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Typography variant="h5" gutterBottom>
-          Cart
-        </Typography>
-        <Button onClick={onClearCart} variant="text">
-          Clear cart
-        </Button>
-      </Box>
-
+     <CartHeader onClearCart={onClearCart} />
       <Paper sx={{ padding: "15px", marginBottom: "25px" }}>{elements}</Paper>
-      <Box sx={{ display: "flex", justifyContent: "flex-end", gap: "20px" }}>
-        <Typography variant="h5">Total price: {totalPrice}</Typography>
-        <Link to="/checkout">
-          <Button variant="contained" color="success">
-            To checkout
-          </Button>
-        </Link>
-      </Box>
+     <CartCheckout totalPrice={totalPrice} />
     </Box>
   );
 };
