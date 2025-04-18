@@ -1,1 +1,3 @@
 export const ADD_TO_CART = "ADD_TO_CART";
+
+export const INSREASE_COUNT_IN_CART ="INSREASE_COUNT_IN_CART";
