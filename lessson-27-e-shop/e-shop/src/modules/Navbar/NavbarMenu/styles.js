@@ -5,13 +5,17 @@ export const navbarMenuStyle = css`
     gap: 64px;
 `;
 
-export const navbarMenuLinkStyle = css`
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    color: #FFFFFF80;
+export const navbarMenuLinkStyle = color => css`
+text-decoration: none;
+font-size: 15px;
+font-weight: 600;
+color: ${color};
 
-    :hover {
-        color: #fff;
-    }
+&.active {
+    color: #fff;
+}
+
+:hover {
+    color: #fff;
+}
 `;
