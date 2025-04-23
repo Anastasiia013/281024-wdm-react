@@ -7,17 +7,17 @@ import NavbarMenu from "./NavbarMenu/NavbarMenu";
 
 import { navbarStyle, navbarContentStyle } from "./styles";
 
-const Navbar = ()=> {
-    return (
-        <nav css={navbarStyle}>
-            <Container>
-                <div css={navbarContentStyle}>
-                    <NavbarLogo />
-                    <NavbarMenu />
-                </div>
-            </Container>
-        </nav>
-    )
-}
+const Navbar = () => {
+  return (
+    <nav css={navbarStyle}>
+      <Container>
+        <div css={navbarContentStyle}>
+          <NavbarLogo />
+          <NavbarMenu />
+        </div>
+      </Container>
+    </nav>
+  );
+};
 
 export default Navbar;

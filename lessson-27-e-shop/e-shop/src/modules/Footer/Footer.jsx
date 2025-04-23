@@ -1,10 +1,20 @@
 /** @jsxImportSource @emotion/react */
 
-import { footerStyle } from "./styles";
+import Container from "../layouts/Container/Container";
+
+import FooterContacts from "./FooterContacts/FooterContacts";
+
+import { footerStyle, footerContentStyle } from "./styles";
 
 const Footer = ()=> {
     return (
-        <footer css={footerStyle}></footer>
+        <footer css={footerStyle}>
+            <Container>
+                <div css={footerContentStyle}>
+                    <FooterContacts />
+                </div>
+            </Container>
+        </footer>
     )
 }
 
