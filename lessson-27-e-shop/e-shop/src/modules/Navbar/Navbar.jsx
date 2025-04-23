@@ -3,14 +3,18 @@
 import Container from "../layouts/Container/Container";
 
 import NavbarLogo from "./NavbarLogo/NavbarLogo";
+import NavbarMenu from "./NavbarMenu/NavbarMenu";
 
-import { navbarStyle } from "./styles";
+import { navbarStyle, navbarContentStyle } from "./styles";
 
 const Navbar = ()=> {
     return (
         <nav css={navbarStyle}>
             <Container>
-                <NavbarLogo />
+                <div css={navbarContentStyle}>
+                    <NavbarLogo />
+                    <NavbarMenu />
+                </div>
             </Container>
         </nav>
     )
