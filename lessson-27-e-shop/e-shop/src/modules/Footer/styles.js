@@ -9,4 +9,5 @@ export const footerContentStyle = css`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 94px;
 `;
