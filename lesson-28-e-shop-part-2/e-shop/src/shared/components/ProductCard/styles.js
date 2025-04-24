@@ -18,3 +18,17 @@ export const productCardImageStyle = css`
     ${imgResponsiveStyle}
     max-width: 278px;
 `
+export const productCardTitleStyle = css`
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 42px;
+`;
+
+export const productCardPriceNameStyle = css`
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+`;
