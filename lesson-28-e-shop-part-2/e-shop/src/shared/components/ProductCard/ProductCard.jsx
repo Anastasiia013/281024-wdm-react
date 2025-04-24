@@ -9,6 +9,8 @@ import {
   productCardTitleStyle,
   productCardPriceNameStyle,
   productCardPriceStyle,
+  productCardActionsStyle,
+  productCardAddToCartIconStyle,
 } from "./styles";
 
 const ProductCard = () => {
@@ -22,12 +24,12 @@ const ProductCard = () => {
         />
       </div>
       <p css={productCardTitleStyle}>Мужские Кроссовки Nike Air Zoom Pegasus</p>
-      <div>
+      <div css={productCardActionsStyle}>
         <div>
           <span css={productCardPriceNameStyle}>Цена:</span>
           <span css={productCardPriceStyle}>180 €</span>
         </div>
-        <span><AddToCartIcon /></span>
+        <span css={productCardAddToCartIconStyle}><AddToCartIcon /></span>
       </div>
     </div>
   );

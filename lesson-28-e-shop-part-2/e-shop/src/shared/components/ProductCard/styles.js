@@ -38,3 +38,13 @@ export const productCardPriceStyle = css`
     font-weight: 700;
     color: #000;
 `;
+
+export const productCardActionsStyle = css`
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+`;
+
+export const productCardAddToCartIconStyle = css`
+    cursor: pointer;
+`;
