@@ -1,8 +1,10 @@
 /** @jsxImportSource @emotion/react */
 
+import {productCardWrapperStyle} from "./styles";
+
 const ProductCard = ()=> {
     return (
-        <div>
+        <div css={productCardWrapperStyle}>
             <div>
                 <img src="" alt="" />
             </div>
