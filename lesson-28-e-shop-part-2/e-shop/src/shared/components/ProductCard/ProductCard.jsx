@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+import { AddToCartIcon } from "../icons";
+
 import {
   productCardWrapperStyle,
   productCardImageWrapperStyle,
@@ -25,7 +27,7 @@ const ProductCard = () => {
           <span css={productCardPriceNameStyle}>Цена:</span>
           <span css={productCardPriceStyle}>180 €</span>
         </div>
-        <span>+</span>
+        <span><AddToCartIcon /></span>
       </div>
     </div>
   );
