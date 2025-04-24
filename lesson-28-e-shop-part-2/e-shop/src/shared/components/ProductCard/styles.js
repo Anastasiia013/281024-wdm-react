@@ -32,3 +32,9 @@ export const productCardPriceNameStyle = css`
     display: block;
     margin-bottom: 5px;
 `;
+
+export const productCardPriceStyle = css`
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+`;

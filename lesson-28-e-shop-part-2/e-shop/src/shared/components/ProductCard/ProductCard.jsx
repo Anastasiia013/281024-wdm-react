@@ -6,6 +6,7 @@ import {
   productCardImageStyle,
   productCardTitleStyle,
   productCardPriceNameStyle,
+  productCardPriceStyle,
 } from "./styles";
 
 const ProductCard = () => {
@@ -22,7 +23,7 @@ const ProductCard = () => {
       <div>
         <div>
           <span css={productCardPriceNameStyle}>Цена:</span>
-          <span>180 €</span>
+          <span css={productCardPriceStyle}>180 €</span>
         </div>
         <span>+</span>
       </div>
