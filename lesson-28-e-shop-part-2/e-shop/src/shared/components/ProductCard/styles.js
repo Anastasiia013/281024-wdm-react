@@ -9,6 +9,12 @@ export const productCardWrapperStyle = css`
     border-radius: 42px;
 `;
 
+export const productCardImageWrapperStyle = css`
+    text-align: center;
+    margin-bottom: 32px;
+`;
+
 export const productCardImageStyle = css`
     ${imgResponsiveStyle}
+    max-width: 278px;
 `
