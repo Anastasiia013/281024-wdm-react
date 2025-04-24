@@ -1,8 +1,13 @@
-import Button from "../../shared/components/Button/Button";
+import Container from "../../modules/layouts/Container/Container";
+
+import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 
 const MainPage = ()=> {
     return (
-    <div style={{padding: "100px"}}><Button>Отправить</Button></div>)
+        <Container>
+            <SectionTitle title="Товары" />
+        </Container>
+    )
 }
 
 export default MainPage;
