@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import Container from "../layouts/Container/Container";
 import Loader from "../../shared/components/Loader/Loader";
+import LoadingError from "../../shared/components/LoadingError/LoadingError";
 
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import ProductCard from "../../shared/components/ProductCard/ProductCard";
@@ -39,7 +40,7 @@ const PopularProducts = () => {
       <Container>
         <SectionTitle title="Товары" />
         <Loader loading={loading} />
-        {error && <p>{error}</p>}
+        {error && <LoadingError>{error}</LoadingError>}
         <div css={productListStyle}>{elements}</div>
       </Container>
     </div>
