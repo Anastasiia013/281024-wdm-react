@@ -1,5 +1,6 @@
 const fields = {
     username: {
+        label: "Username",
         type: "text",
         placeholder: "Username",
         name: "username",
@@ -8,6 +9,7 @@ const fields = {
         }
     },
     email: {
+        label: "Email",
         type: "email",
         placeholder: "Email",
         name: "email",
@@ -16,6 +18,7 @@ const fields = {
         }
     },
     password: {
+        label: "Password",
         type: "password",
         placeholder: "Password",
         name: "password",
