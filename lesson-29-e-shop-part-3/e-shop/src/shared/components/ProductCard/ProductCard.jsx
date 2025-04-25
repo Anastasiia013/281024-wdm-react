@@ -13,13 +13,13 @@ import {
   productCardAddToCartIconStyle,
 } from "./styles";
 
-const ProductCard = ({id, img, title, price, addToCart}) => {
+const ProductCard = ({id, image, title, price, addToCart}) => {
   return (
     <div css={productCardWrapperStyle}>
       <div css={productCardImageWrapperStyle}>
         <img
           css={productCardImageStyle}
-          src={img}
+          src={image}
           alt={title}
         />
       </div>
