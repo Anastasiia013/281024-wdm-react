@@ -8,6 +8,10 @@ const navbarMenuItems = [
         text: "Корзина",
     },
     {
+        href: "/register",
+        text: "Регистрация",
+    },
+    {
         href: "/contacts",
         text: "Контакты",
     },
