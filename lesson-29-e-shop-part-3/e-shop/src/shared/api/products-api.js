@@ -1,6 +1,13 @@
 import backendInstance from "./backendInstance";
 
-export const getPopularProducts = async ()=> {
-    const {data} = await backendInstance.get("/products");
+import requestDecorator from "./requestDecorator";
+
+export const getPopularProducts = requestDecorator(async () => {
+    const { data } = await backendInstance.get("/products");
     return data.data;
-}
+})
+
+export const getProductById = requestDecorator(async (id) => {
+    const { data } = await backendInstance.get(`/products/${id}`);
+    return data.data;
+})
