@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
 
 import TextField from "../../../shared/components/TextField/TextField";
+import Button from "../../../shared/components/Button/Button";
+
+import fields from "./fields";
 
 const RegisterForm = ({ submitForm }) => {
   const {
@@ -14,19 +17,21 @@ const RegisterForm = ({ submitForm }) => {
     console.log(values);
     reset();
   };
-  console.log(errors);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <TextField
-        type="text"
-        placeholder="Username"
-        name="username"
+        {...fields.username}
         register={register}
-        rules={{
-            required: "Username must be exist"
-        }}
         error={errors.username}
       />
+      <TextField {...fields.email} register={register} error={errors.email} />
+      <TextField
+        {...fields.password}
+        register={register}
+        error={errors.password}
+      />
+      <Button>Register</Button>
     </form>
   );
 };
