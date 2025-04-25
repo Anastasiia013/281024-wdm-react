@@ -1,35 +1,39 @@
 /** @jsxImportSource @emotion/react */
-import { useState, useEffect } from "react";
 
 import Container from "../layouts/Container/Container";
 import Loader from "../../shared/components/Loader/Loader";
 import LoadingError from "../../shared/components/LoadingError/LoadingError";
-
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import ProductCard from "../../shared/components/ProductCard/ProductCard";
+
+import useFetch from "../../shared/hooks/useFetch";
 
 import { getPopularProducts } from "../../shared/api/products-api";
 
 import { popularProductsStyle, productListStyle } from "./styles";
 
 const PopularProducts = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const { data: products, loading, error } = useFetch({
+    request: getPopularProducts,
+    initialData: [],
+  });
+  //   const [products, setProducts] = useState([]);
+  //   const [loading, setLoading] = useState(false);
+  //   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchPopularProducts = async () => {
-      setLoading(true);
-      const { data, error } = await getPopularProducts();
-      setLoading(false);
-      if (error) {
-        return setError(error.response.data.message);
-      }
-      setProducts(data);
-    };
+  //   useEffect(() => {
+  //     const fetchPopularProducts = async () => {
+  //       setLoading(true);
+  //       const { data, error } = await getPopularProducts();
+  //       setLoading(false);
+  //       if (error) {
+  //         return setError(error.response.data.message);
+  //       }
+  //       setProducts(data);
+  //     };
 
-    fetchPopularProducts();
-  }, []);
+  //     fetchPopularProducts();
+  //   }, []);
 
   const elements = products.map((item) => (
     <ProductCard key={item.id} {...item} />
@@ -41,7 +45,9 @@ const PopularProducts = () => {
         <SectionTitle title="Товары" />
         <Loader loading={loading} />
         {error && <LoadingError>{error}</LoadingError>}
-        <div css={productListStyle}>{elements}</div>
+        {Boolean(products.length) && (
+          <div css={productListStyle}>{elements}</div>
+        )}
       </Container>
     </div>
   );
