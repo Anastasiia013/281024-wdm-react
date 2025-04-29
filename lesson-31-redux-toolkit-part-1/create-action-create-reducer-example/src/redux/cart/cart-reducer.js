@@ -1,15 +1,45 @@
-import {
-  ADD_TO_CART,
-  INSREASE_COUNT_IN_CART,
-  DESREASE_COUNT_IN_CART,
-  DELETE_FROM_CART,
-  CLEAR_CART,
-} from "./cart-types";
+import { createReducer } from "@reduxjs/toolkit";
 
+import {
+  addToCart,
+  increaseCountInCart,
+  decreaseCountInCart,
+  deleteFromCart,
+  clearCart,
+} from "./cart-actions";
+
+const cartReducer = createReducer([], (builder) => {
+  builder
+    .addCase(addToCart, (store, { payload }) => {
+      const product = store.find((item) => item.id === payload.id);
+      if (product) {
+        product.count += 1;
+      } else {
+        store.push({ ...payload, count: 1 });
+      }
+    })
+    .addCase(increaseCountInCart, (store, { payload }) => {
+      const product = store.find((item) => item.id === payload);
+      product.count += 1;
+    })
+    .addCase(decreaseCountInCart, (store, { payload }) => {
+      const index = store.findIndex((item) => item.id === payload);
+      store[index].count -= 1;
+      if (!store[index].count) {
+        store.splice(index, 1);
+      }
+    })
+    .addCase(deleteFromCart, (store, { payload }) =>
+      store.filter((item) => item.id !== payload)
+    )
+    .addCase(clearCart, () => [])
+});
+
+/*
 const cartReducer = (store = [], { type, payload }) => {
     const newStore = store.map((item) => ({ ...item }));
   switch (type) {
-    case ADD_TO_CART:
+    case addToCart.type:
       const product = newStore.find((item) => item.id === payload.id);
       if (product) {
         product.count += 1;
@@ -17,12 +47,12 @@ const cartReducer = (store = [], { type, payload }) => {
       }
       return [...newStore, { ...payload, count: 1 }];
 
-    case INSREASE_COUNT_IN_CART:
+    case increaseCountInCart.type:
       const updateProduct = newStore.find((item) => item.id === payload);
       updateProduct.count += 1;
       return newStore;
 
-    case DESREASE_COUNT_IN_CART:
+    case decreaseCountInCart.type:
       const descreaseProduct = newStore.find(
         (item) => item.id === payload
       );
@@ -32,15 +62,16 @@ const cartReducer = (store = [], { type, payload }) => {
       }
       return newStore;
 
-    case DELETE_FROM_CART:
+    case deleteFromCart.type:
         return newStore.filter((item) => item.id !== payload);
 
-    case CLEAR_CART:
+    case clearCart.type:
         return [];
         
     default:
       return store;
   }
 };
+*/
 
 export default cartReducer;
