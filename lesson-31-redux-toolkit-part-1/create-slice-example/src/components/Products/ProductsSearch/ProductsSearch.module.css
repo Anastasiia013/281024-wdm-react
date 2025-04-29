@@ -1,0 +1,10 @@
+.form {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.error {
+    color: red;
+    margin-top: 5px;
+}

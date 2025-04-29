@@ -1,0 +1,13 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
