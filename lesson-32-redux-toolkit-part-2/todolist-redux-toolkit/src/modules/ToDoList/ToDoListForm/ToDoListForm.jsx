@@ -28,10 +28,13 @@ const ToDoListForm = () => {
           placeholder="Enter new todo"
           id={todoId}
         />
+        <Form.ErrorMessage show={errors.todo} placement="bottomStart">
+          {errors.todo?.message}
+        </Form.ErrorMessage>
       </Form.Group>
       <Button appearance="primary" type="submit">
-          Add todo
-        </Button>
+        Add todo
+      </Button>
     </Form>
   );
 };
