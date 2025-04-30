@@ -21,7 +21,7 @@ const ToDoListForm = () => {
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Form.Group>
         <Form.ControlLabel id={todoId}>New todo</Form.ControlLabel>
-        <Input
+        <input
           {...register("todo", {
             required: "Todo must be exist",
           })}
@@ -29,6 +29,9 @@ const ToDoListForm = () => {
           id={todoId}
         />
       </Form.Group>
+      <Button appearance="primary" type="submit">
+          Add todo
+        </Button>
     </Form>
   );
 };
