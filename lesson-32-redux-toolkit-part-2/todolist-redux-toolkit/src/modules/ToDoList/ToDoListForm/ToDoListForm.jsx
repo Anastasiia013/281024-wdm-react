@@ -1,8 +1,8 @@
 import { useId } from "react";
 import { useForm } from "react-hook-form";
-import { Form, Input, Button } from "rsuite";
+import { Form, Button } from "rsuite";
 
-const ToDoListForm = () => {
+const ToDoListForm = ({submitForm}) => {
   const {
     register,
     handleSubmit,
@@ -11,7 +11,7 @@ const ToDoListForm = () => {
   } = useForm();
 
   const onSubmit = (values) => {
-    console.log(values);
+    submitForm(values);
     reset();
   };
 

@@ -1,7 +1,9 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import ToDoListForm from "./ToDoListForm/ToDoListForm";
 import ToDoListItems from "./ToDoListItems/ToDoListItems";
+
+import { addTodo } from "../../redux/todo/todo-slice";
 
 import { selectAllTodo } from "../../redux/todo/todo-selectors";
 
@@ -10,9 +12,15 @@ import styles from "./ToDoList.module.css";
 const ToDoList = () => {
   const items = useSelector(selectAllTodo);
 
+  const dispatch = useDispatch();
+
+  const onAddTodo = data => {
+    console.log(data);
+  }
+
   return (
     <div className={styles.wrapper}>
-      <ToDoListForm />
+      <ToDoListForm submitForm={onAddTodo} />
       <ToDoListItems items={items} />
     </div>
   );
