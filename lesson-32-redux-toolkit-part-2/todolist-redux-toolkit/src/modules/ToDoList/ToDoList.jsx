@@ -15,7 +15,7 @@ const ToDoList = () => {
   const dispatch = useDispatch();
 
   const onAddTodo = data => {
-    console.log(data);
+    dispatch(addTodo(data));
   }
 
   return (
