@@ -13,13 +13,15 @@ const ToDoListItems = ({ items = [] }) => {
           {todo}
         </FlexboxGrid.Item>
 
-        <FlexboxGrid.Item colspan={9} className={styles.actions}>
-          <Button appearance="primary">
-            {completed ? "Undo" : "Completed"}
-          </Button>
-          <Button appearance="primary" color="red">
-            Delete
-          </Button>
+        <FlexboxGrid.Item colspan={9}>
+          <FlexboxGrid justify="end" className={styles.actions}>
+            <Button appearance="primary">
+              {completed ? "Undo" : "Completed"}
+            </Button>
+            <Button appearance="primary" color="red">
+              Delete
+            </Button>
+          </FlexboxGrid>
         </FlexboxGrid.Item>
       </FlexboxGrid>
     </List.Item>
