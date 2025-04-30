@@ -6,20 +6,22 @@ const todoSlice = createSlice({
   initialState: [],
   reducers: {
     addTodo: {
-        reducer: (store, {payload})=> [...store, payload],
-        prepare: data => {
-            return {
-                payload: {
-                    id: nanoid(),
-                    completed: false,
-                    ...data,
-                }
-            }
-        }
-    }
+      reducer: (store, { payload }) => [...store, payload],
+      prepare: (data) => {
+        return {
+          payload: {
+            id: nanoid(),
+            completed: false,
+            ...data,
+          },
+        };
+      },
+    },
+    deleteTodo: (store, { payload }) =>
+      store.filter((item) => item.id !== payload),
   },
 });
 
-export const { addTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo } = todoSlice.actions;
 
 export default todoSlice.reducer;

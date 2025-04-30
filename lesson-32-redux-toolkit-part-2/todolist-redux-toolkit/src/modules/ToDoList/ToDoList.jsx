@@ -14,9 +14,9 @@ const ToDoList = () => {
 
   const dispatch = useDispatch();
 
-  const onAddTodo = data => {
+  const onAddTodo = (data) => {
     dispatch(addTodo(data));
-  }
+  };
 
   return (
     <div className={styles.wrapper}>
