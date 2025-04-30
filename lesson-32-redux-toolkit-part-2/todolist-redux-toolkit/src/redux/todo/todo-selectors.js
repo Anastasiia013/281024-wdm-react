@@ -1,0 +1,1 @@
+export const selectAllTodo = store => store.todo;
