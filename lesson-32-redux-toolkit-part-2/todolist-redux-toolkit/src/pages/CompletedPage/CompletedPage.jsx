@@ -1,5 +1,11 @@
+import { Heading } from "rsuite";
+
 const CompletedPage = ()=> {
-    return <h1>Completed Page</h1>
+    return (
+        <main>
+            <Heading level={1}>Completed To Do</Heading>
+        </main>
+    )
 }
 
 export default CompletedPage;

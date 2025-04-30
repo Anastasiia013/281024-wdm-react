@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { Heading } from "rsuite";
 
 const NotFoundPage = ()=> {
     return (
         <main>
-            <h1>Page not found</h1>
+            <Heading level={1}>Page not found</Heading>
             <Link to="/">to home page</Link>
         </main>
     )

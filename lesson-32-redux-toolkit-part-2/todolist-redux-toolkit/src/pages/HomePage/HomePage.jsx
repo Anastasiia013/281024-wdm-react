@@ -1,6 +1,10 @@
+import { Heading } from "rsuite";
+
 const HomePage = ()=> {
     return (
-        <h1>Home page</h1>
+        <main>
+            <Heading level={1}>To Do List</Heading>
+        </main>
     )
 }
 
