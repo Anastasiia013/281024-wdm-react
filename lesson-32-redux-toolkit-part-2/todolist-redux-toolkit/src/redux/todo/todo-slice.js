@@ -17,11 +17,15 @@ const todoSlice = createSlice({
         };
       },
     },
+    toggleTodoCompleted: (store, { payload }) => {
+      const todo = store.find((item) => item.id === payload);
+      todo.completed = !todo.completed;
+    },
     deleteTodo: (store, { payload }) =>
       store.filter((item) => item.id !== payload),
   },
 });
 
-export const { addTodo, deleteTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo, toggleTodoCompleted } = todoSlice.actions;
 
 export default todoSlice.reducer;

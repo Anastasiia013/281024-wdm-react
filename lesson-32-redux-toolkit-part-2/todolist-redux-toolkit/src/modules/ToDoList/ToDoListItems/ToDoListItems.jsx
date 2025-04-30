@@ -1,7 +1,10 @@
 import { useDispatch } from "react-redux";
 import { List, Button, FlexboxGrid } from "rsuite";
 
-import { deleteTodo } from "../../../redux/todo/todo-slice";
+import {
+  deleteTodo,
+  toggleTodoCompleted,
+} from "../../../redux/todo/todo-slice";
 
 import styles from "./ToDoListItems.module.css";
 
@@ -10,6 +13,10 @@ const ToDoListItems = ({ items = [] }) => {
 
   const onDeleteTodo = (id) => {
     dispatch(deleteTodo(id));
+  };
+
+  const onToggleTodoCompleted = (id) => {
+    dispatch(toggleTodoCompleted(id));
   };
 
   const elements = items.map(({ id, todo, completed }) => (
@@ -24,7 +31,10 @@ const ToDoListItems = ({ items = [] }) => {
 
         <FlexboxGrid.Item colspan={9}>
           <FlexboxGrid justify="end" className={styles.actions}>
-            <Button appearance="primary">
+            <Button
+              onClick={() => onToggleTodoCompleted(id)}
+              appearance="primary"
+            >
               {completed ? "Undo" : "Completed"}
             </Button>
             <Button
