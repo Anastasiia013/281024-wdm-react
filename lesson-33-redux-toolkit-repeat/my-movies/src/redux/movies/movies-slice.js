@@ -17,9 +17,15 @@ const moviesSlice = createSlice({
       },
       reducer: (store, { payload }) => [...store, payload],
     },
+    deleteMovie: (store, { payload }) =>
+      store.filter((item) => item.id !== payload),
+    toggleFavorite: (store, {payload})=> {
+      const movie = store.find(item => item.id === payload);
+      movie.favorite = !movie.favorite;
+    }
   },
 });
 
-export const { addMovie } = moviesSlice.actions;
+export const { addMovie, deleteMovie, toggleFavorite } = moviesSlice.actions;
 
 export default moviesSlice.reducer;
