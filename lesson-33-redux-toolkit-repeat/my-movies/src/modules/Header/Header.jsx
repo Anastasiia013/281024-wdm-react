@@ -1,4 +1,5 @@
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
+import HeaderAuth from "./HeaderAuth/HeaderAuth";
 
 import styles from "./Header.module.css";
 
@@ -8,6 +9,7 @@ const Header = ()=> {
             <div className="container">
                 <div className={styles.wrapper}>
                     <HeaderLogo />
+                    <HeaderAuth />
                 </div>
             </div>
         </header>
