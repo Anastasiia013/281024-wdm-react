@@ -1,4 +1,7 @@
+import { useCallback } from "react";
 import { useDispatch } from "react-redux";
+
+import MovieListItem from "./MovieListItem/MovieListItem";
 
 import {
   deleteMovie,
@@ -10,18 +13,23 @@ import styles from "./MovieList.module.css";
 const MovieList = ({ items = [] }) => {
   const dispatch = useDispatch();
 
-  const onDeleteMovie = (id) => dispatch(deleteMovie(id));
+  const onDeleteMovie = useCallback(
+    (id) => dispatch(deleteMovie(id)),
+    [dispatch]
+  );
 
-  const onToggleFavorite = (id) => dispatch(toggleFavorite(id));
+  const onToggleFavorite = useCallback(
+    (id) => dispatch(toggleFavorite(id)),
+    [dispatch]
+  );
 
   const elements = items.map((item) => (
-    <li item={item.id}>
-      {item.title}
-      <button onClick={() => onToggleFavorite(item.id)}>
-        {item.favorite ? "Remove from" : "Add to"} favorite
-      </button>
-      <button onClick={() => onDeleteMovie(item.id)}>Delete</button>
-    </li>
+    <MovieListItem
+      key={item.id}
+      {...item}
+      onDeleteMovie={onDeleteMovie}
+      onToggleFavorite={onToggleFavorite}
+    />
   ));
 
   return <ul>{elements}</ul>;
