@@ -1,0 +1,1 @@
+export const selectAllMovies = store => store.movies;

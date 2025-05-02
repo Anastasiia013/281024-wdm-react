@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { nanoid } from "nanoid";
 
 const moviesSlice = createSlice({
   name: "movies",
@@ -9,6 +10,7 @@ const moviesSlice = createSlice({
         return {
           payload: {
             ...data,
+            id: nanoid(),
             createdAt: new Date(),
           },
         };
