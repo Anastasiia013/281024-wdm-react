@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 
 import styles from "./MovieAddForm.module.css";
 
-const MovieAddForm = (submitForm) => {
+const MovieAddForm = ({submitForm}) => {
   const {
     register,
     handleSubmit,
