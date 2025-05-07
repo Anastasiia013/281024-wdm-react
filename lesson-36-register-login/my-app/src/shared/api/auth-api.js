@@ -10,3 +10,8 @@ export const registerUserApi = requestDecorator(async payload => {
     const {data} = await authInstance.post("/auth/register", payload);
     return data;
 });
+
+export const loginUserApi = requestDecorator(async payload => {
+    const {data} = await authInstance.post("/auth/login", payload);
+    return data;
+});

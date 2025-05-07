@@ -12,7 +12,7 @@ const Register = ()=> {
 
     const dispatch = useDispatch();
 
-    const onRegiserUser = data => {
+    const onRegiserUser = ({confirmPassword, ...data}) => {
         dispatch(registerUser(data));
     }
 
