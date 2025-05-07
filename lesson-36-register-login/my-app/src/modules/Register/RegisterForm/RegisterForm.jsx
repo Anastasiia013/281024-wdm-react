@@ -16,8 +16,7 @@ const RegisterForm = ({ submitForm }) => {
   });
 
   const onSubmit = (values) => {
-    console.log(values);
-    // submitForm(values);
+    submitForm(values);
     reset();
   };
 
