@@ -1,9 +1,26 @@
+import { useSelector, useDispatch } from "react-redux";
+import { Navigate } from "react-router-dom";
+
 import RegisterForm from "./RegisterForm/RegisterForm";
 
+import { registerUser } from "../../redux/auth/auth-thunks";
+
+import { selectAuthSuccess } from "../../redux/auth/auth-selectors";
+
 const Register = ()=> {
+    const success = useSelector(selectAuthSuccess);
+
+    const dispatch = useDispatch();
+
+    const onRegiserUser = data => {
+        dispatch(registerUser(data));
+    }
+
+    if(success) return <Navigate to="/login" />
+
     return (
         <div>
-            <RegisterForm />
+            <RegisterForm submitForm={onRegiserUser} />
         </div>
     )
 }

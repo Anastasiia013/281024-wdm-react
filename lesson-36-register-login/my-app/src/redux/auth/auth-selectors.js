@@ -1,0 +1,1 @@
+export const selectAuthSuccess = store => store.auth.success;
