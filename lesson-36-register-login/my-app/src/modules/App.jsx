@@ -1,3 +1,5 @@
+import MainMenu from "./MainMenu/MainMenu";
+
 import "../shared/styles/style.css";
 
 function App() {
@@ -5,7 +7,7 @@ function App() {
 
   return (
     <>
-     
+     <MainMenu />
     </>
   )
 }
